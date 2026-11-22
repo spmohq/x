@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#26483c">
+<title>My Exclusive R&amp;D Tools and Process</title>
+<link rel="icon" href="spm.ico">
+<style>
+:root{
+ --forest:#26483c;--forest2:#19372e;--pink:#fa72dc;--blue:#3582be;
+ --lime:#d2da7e;--teal:#5d8d7f;--ink:#20312b;--muted:#687a72;
+ --paper:#f3f6f3;--white:#fff;--line:#dfe8e2;--soft:#edf3ef;
+ --shadow:0 18px 48px rgba(27,58,47,.10);--shadow2:0 8px 24px rgba(27,58,47,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 90% 0%,rgba(210,218,126,.16),transparent 28%),linear-gradient(180deg,#f6f8f6,#edf2ee);color:var(--ink);font:15px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+.shell{width:min(1160px,100% - 36px);margin:auto;padding:28px 0 54px}
+.hero{position:relative;overflow:hidden;border-radius:28px;padding:clamp(28px,5vw,54px);color:#fff;background:linear-gradient(125deg,#18372d 0%,#26483c 48%,#5d8d7f 100%);box-shadow:0 24px 60px rgba(25,55,46,.22);border:1px solid rgba(210,218,126,.35)}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border:1px solid rgba(210,218,126,.28);border-radius:50%;right:-115px;top:-245px;box-shadow:0 0 0 28px rgba(255,255,255,.035),0 0 0 68px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.018)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.07) 48%,transparent 68%);pointer-events:none}
+.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--lime)}
+h1,h2,h3,p{margin-top:0}
+.hero h1{position:relative;z-index:1;font:400 clamp(2.2rem,5vw,3.65rem)/1.08 Georgia,serif;letter-spacing:-.035em;max-width:760px;margin:14px 0}
+.hero p{position:relative;z-index:1;max-width:660px;color:#e2eee7;margin:0}
+.hero-meta{position:relative;z-index:1;display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}
+.pill{display:inline-flex;align-items:center;border:1px solid rgba(255,255,255,.23);background:rgba(255,255,255,.10);padding:7px 12px;border-radius:99px;font-size:.75rem;color:#f2f7f3}
+.section{margin-top:34px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}
+.kicker{color:var(--teal);font-size:.7rem;font-weight:850;letter-spacing:.18em;text-transform:uppercase}
+h2{font:400 clamp(1.7rem,3vw,2.25rem)/1.15 Georgia,serif;color:var(--forest);margin:5px 0 0}
+.section-desc{color:var(--muted);font-size:.9rem;margin:7px 0 0}
+.tool-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.tool-card{display:flex;flex-direction:column;min-height:164px;padding:20px;border-radius:19px;background:linear-gradient(145deg,#fff,#f8fbf8);border:1px solid var(--line);box-shadow:var(--shadow2);transition:.2s ease}
+.tool-card:hover{transform:translateY(-3px);border-color:rgba(93,141,127,.55);box-shadow:var(--shadow)}
+.tool-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.tool-icon{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(145deg,#e5eee8,#f5f8e7);color:var(--forest);font-weight:900}
+.tool-tag{font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal);font-weight:800}
+.tool-card h3{font-size:1rem;color:var(--forest);margin:15px 0 4px}
+.tool-card p{font-size:.82rem;color:var(--muted);margin:0 0 14px}
+.tool-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;color:var(--blue);font-size:.8rem;font-weight:800;overflow-wrap:anywhere}
+.tool-link span:last-child{font-size:1.1rem}
+.research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.research-link{padding:14px 15px;border-radius:14px;background:#fff;border:1px solid var(--line);box-shadow:0 5px 15px rgba(27,58,47,.04);display:flex;gap:12px;align-items:center;min-width:0;transition:.2s}
+.research-link:hover{border-color:var(--teal);background:#fbfdfb}
+.link-no{flex:0 0 29px;width:29px;height:29px;border-radius:9px;background:var(--soft);display:grid;place-items:center;color:var(--forest);font-size:.72rem;font-weight:850}
+.research-link strong{display:block;color:var(--forest);font-size:.84rem}
+.research-link small{display:block;color:var(--muted);font-size:.69rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.process-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:clamp(18px,3vw,28px);box-shadow:var(--shadow2)}
+.concept{background:linear-gradient(115deg,#f0f5ee,#f9f9ed);border:1px solid #dce7d6;border-radius:16px;padding:17px 19px;margin-bottom:22px}
+.concept-label{font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--teal);font-weight:900}
+.concept p{font:400 1.22rem/1.35 Georgia,serif;color:var(--forest);margin:5px 0 0}
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.step{position:relative;border:1px solid var(--line);border-radius:15px;padding:15px 13px;background:#fbfcfb;min-height:145px}
+.step-num{width:29px;height:29px;border-radius:10px;background:var(--forest);color:#fff;display:grid;place-items:center;font-size:.75rem;font-weight:850;margin-bottom:12px}
+.step h3{font-size:.85rem;color:var(--forest);margin:0 0 6px}
+.step p{font-size:.75rem;color:var(--muted);margin:0}
+.gap-title{display:flex;align-items:center;gap:10px;margin:22px 0 12px;color:var(--forest);font-weight:850}
+.gap-title:after{content:"";height:1px;background:var(--line);flex:1}
+.gap-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.gap-item{display:flex;align-items:flex-start;gap:12px;padding:14px;border-radius:14px;background:#f8faf8;border:1px solid var(--line)}
+.gap-num{font-size:.67rem;font-weight:900;color:var(--blue);letter-spacing:.08em}
+.gap-item strong{display:block;font-size:.83rem;color:var(--forest)}
+.gap-item span:last-child{font-size:.74rem;color:var(--muted)}
+.generator{margin-top:36px;border-radius:24px;padding:clamp(18px,3.5vw,30px);background:linear-gradient(145deg,#fff,#f7faf7);border:1px solid #dce7df;box-shadow:var(--shadow)}
+.generator-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;margin-bottom:22px}
+.generator-head h2{margin-top:4px}
+.status{white-space:nowrap;padding:7px 11px;border-radius:99px;background:#edf4ef;color:var(--forest);font-size:.7rem;font-weight:850}
+.field-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.field{min-width:0}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:.78rem;font-weight:800;color:var(--forest);margin-bottom:6px}
+input,textarea,select{width:100%;border:1px solid #d8e3dc;border-radius:11px;background:#fff;color:var(--ink);padding:12px 13px;outline:none;transition:.18s}
+input:focus,textarea:focus,select:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(93,141,127,.13)}
+textarea{min-height:92px;resize:vertical}
+.hint{font-size:.68rem;color:var(--muted);margin-top:5px}
+.prompt-select{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:0 0 20px}
+.prompt-option{border:1px solid var(--line);background:#fff;color:var(--forest);border-radius:12px;padding:11px 8px;font-size:.76rem;font-weight:800;line-height:1.35;min-height:58px}
+.prompt-option.active{background:linear-gradient(135deg,var(--forest),var(--teal));border-color:var(--forest);color:#fff;box-shadow:0 7px 16px rgba(38,72,60,.17)}
+.actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.btn{border:0;border-radius:11px;padding:12px 17px;font-size:.8rem;font-weight:850;transition:.18s}
+.btn-primary{background:linear-gradient(115deg,var(--forest),var(--teal));color:#fff;box-shadow:0 7px 17px rgba(38,72,60,.18)}
+.btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.btn-secondary{background:#eaf1ec;color:var(--forest);border:1px solid #d5e2d9}
+.btn-quiet{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.output-wrap{margin-top:22px;border:1px solid #dce7df;border-radius:16px;overflow:hidden;background:#fff}
+.output-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;background:#eff5f0;border-bottom:1px solid var(--line)}
+.output-head strong{font-size:.8rem;color:var(--forest)}
+.output-head span{font-size:.68rem;color:var(--muted)}
+#output{display:block;width:100%;min-height:330px;border:0;border-radius:0;box-shadow:none;padding:17px;font:.78rem/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:#26382f}
+#output:focus{box-shadow:none}
+#conceptPromptText{display:block;width:100%;min-height:340px;border:0;border-radius:0;box-shadow:none;padding:17px;font:.84rem/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#fff;color:#20312b;resize:vertical}
+#conceptPromptText:focus{box-shadow:none}
+.output-actions{padding:12px 14px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}
+.notice{margin-top:15px;padding:13px 15px;border-radius:13px;background:#f7f7ed;border:1px solid #e8e8cb;color:#59613b;font-size:.76rem}
+.footer{text-align:center;padding:28px 10px 0;color:#7b8981;font-size:.72rem}
+.hidden{display:none!important}
+@media(max-width:850px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.research-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.step:last-child{grid-column:1/-1}.prompt-select{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){
+ .shell{width:min(100% - 22px,1160px);padding-top:11px}
+ .hero{border-radius:21px;padding:27px 22px}
+ .hero h1{font-size:2.35rem}
+ .section{margin-top:28px}
+ .section-head{display:block}
+ .tool-grid,.research-grid,.gap-list,.field-grid{grid-template-columns:1fr}
+ .tool-card{min-height:145px}
+ .steps{grid-template-columns:1fr}
+ .step,.step:last-child{grid-column:auto;min-height:0}
+ .generator{border-radius:19px;padding:17px}
+ .generator-head{display:block}
+ .status{display:inline-flex;margin-top:12px}
+ .prompt-select{gap:7px}
+ .prompt-option{font-size:.7rem;padding:9px 6px}
+ .actions .btn{flex:1 1 calc(50% - 8px)}
+ .output-head{align-items:flex-start;flex-direction:column}
+ #output{min-height:380px}
+ #conceptPromptText{min-height:390px}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<header class="hero">
+ <div class="eyebrow">Private workspace · Research &amp; Development</div>
+ <h1>My Exclusive R&amp;D Tools and Process</h1>
+ <p>A focused workspace for product visuals, visual learning, research, and a repeatable product-publishing process.</p>
+ <div class="hero-meta"><span class="pill">✦ Product Visuals</span><span class="pill">✦ Research Systems</span><span class="pill">✦ AI Prompt Studio</span></div>
+</header>
+
+<section class="section">
+ <div class="section-head"><div><div class="kicker">01 / Creative workspace</div><h2>My Tools</h2><p class="section-desc">Purpose-built tools for creating and developing visual assets.</p></div></div>
+ <div class="tool-grid">
+  <a class="tool-card" href="https://pv.spmukherjee.co.in/" target="_blank" rel="noopener"><div class="tool-top"><span class="tool-icon">PV</span><span class="tool-tag">Product Visual</span></div><h3>Product Visual Studio</h3><p>Create product-focused visual concepts and creative assets.</p><div class="tool-link"><span>Open tool</span><span>↗</span></div></a>
+  <a class="tool-card" href="https://pv.spmukherjee.co.in/pde.html" target="_blank" rel="noopener"><div class="tool-top"><span class="tool-icon">PD</span><span class="tool-tag">Product Research</span></div><h3>Product Details Extractor</h3><p>Work with product information and prepare structured inputs.</p><div class="tool-link"><span>Open tool</span><span>↗</span></div></a>
+  <a class="tool-card" href="https://vl.spmukherjee.co.in/" target="_blank" rel="noopener"><div class="tool-top"><span class="tool-icon">VL</span><span class="tool-tag">Visual Learning Lab</span></div><h3>Visual Learning Lab</h3><p>Explore visual approaches to learning and explanation.</p><div class="tool-link"><span>Open tool</span><span>↗</span></div></a>
+ </div>
+</section>
+
+<section class="section">
+ <div class="section-head"><div><div class="kicker">02 / Research workspace</div><h2>My Research Tools</h2><p class="section-desc">A collection of research, planning, audience, and campaign utilities.</p></div></div>
+ <div class="research-grid">
+  <a class="research-link" href="https://spmhqo.github.io/dct/" target="_blank" rel="noopener"><span class="link-no">01</span><span><strong>Research Dashboard</strong><small>Research tool hub</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/research-dc.html" target="_blank" rel="noopener"><span class="link-no">02</span><span><strong>Research · DC</strong><small>Research workflow</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/research-students.html" target="_blank" rel="noopener"><span class="link-no">03</span><span><strong>Student Research</strong><small>Research for students</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/app-idea-to-prompt-system-starter.html" target="_blank" rel="noopener"><span class="link-no">04</span><span><strong>Idea to Prompt</strong><small>App idea starter system</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/90-day.html" target="_blank" rel="noopener"><span class="link-no">05</span><span><strong>90-Day Planner</strong><small>Planning and execution</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/audience.html" target="_blank" rel="noopener"><span class="link-no">06</span><span><strong>Audience Research</strong><small>Audience understanding</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/activity-details.html" target="_blank" rel="noopener"><span class="link-no">07</span><span><strong>Activity Details</strong><small>Activity breakdown</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/module-map-infographic.html" target="_blank" rel="noopener"><span class="link-no">08</span><span><strong>Module Map</strong><small>Infographic and structure</small></span></a>
+  <a class="research-link" href="https://spmhqo.github.io/dct/campaign.html" target="_blank" rel="noopener"><span class="link-no">09</span><span><strong>Campaign Studio</strong><small>Campaign planning</small></span></a>
+ </div>
+</section>
+
+<section class="section">
+ <div class="section-head"><div><div class="kicker">03 / Publishing workflow</div><h2>My Process</h2><p class="section-desc">A five-step visual-first affiliate publishing model, supported by four AI prompt gap-fillers.</p></div></div>
+ <div class="process-card">
+  <div class="concept"><div class="concept-label">Concept</div><p>শুধু প্রোডাক্টের ছবি পাবলিশ করে আয়</p></div>
+  <div class="steps">
+   <article class="step"><div class="step-num">01</div><h3>Choose a Product</h3><p>একটা উপযুক্ত প্রোডাক্ট বেছে নাও এবং প্রাথমিকভাবে যাচাই করো।</p></article>
+   <article class="step"><div class="step-num">02</div><h3>Collect Affiliate Link</h3><p>প্রোডাক্টটির সঠিক Affiliate Link সংগ্রহ করো।</p></article>
+   <article class="step"><div class="step-num">03</div><h3>Create Product Image</h3><p>যাচাই করা তথ্যের ভিত্তিতে আকর্ষণীয় প্রোডাক্ট ছবি তৈরি করো।</p></article>
+   <article class="step"><div class="step-num">04</div><h3>Build Bridge Page</h3><p>কপি, Affiliate CTA ও Disclosure-সহ Bridge Page তৈরি করে প্রকাশ করো।</p></article>
+   <article class="step"><div class="step-num">05</div><h3>Publish Social Post</h3><p>Caption, Bridge Page CTA ও প্রাসঙ্গিক Hashtag দিয়ে ছবি প্রকাশ করো।</p></article>
+  </div>
+  <div class="gap-title">Gaps to fill with AI prompts</div>
+  <div class="gap-list">
+   <div class="gap-item"><span class="gap-num">GAP 01</span><div><strong>After Step 02 · Before Step 03</strong><span>Product Details Extraction Prompt — image creation-এর জন্য নির্ভরযোগ্য product brief।</span></div></div>
+   <div class="gap-item"><span class="gap-num">GAP 02</span><div><strong>After Step 03 · Before Step 04</strong><span>Bridge Page Copywriting Prompt — page-এর সম্পূর্ণ কপি।</span></div></div>
+   <div class="gap-item"><span class="gap-num">GAP 03</span><div><strong>After Step 03 · Before Step 04</strong><span>Bridge Page HTML Prompt — কপিকে single-file responsive page-এ রূপান্তর।</span></div></div>
+   <div class="gap-item"><span class="gap-num">GAP 04</span><div><strong>After Step 04 · Before Step 05</strong><span>Social Publishing Prompt — caption, CTA ও hashtag।</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="generator" id="prompt-studio">
+ <div class="generator-head"><div><div class="kicker">04 / AI prompt studio</div><h2>Gap-Filler Prompt Generator</h2><p class="section-desc">Select a prompt, complete the relevant fields, and generate a reusable prompt.</p></div><span class="status">● Runs in your browser</span></div>
+ <div class="prompt-select" role="group" aria-label="Select prompt">
+  <button class="prompt-option active" data-mode="extract">01 · Product Details Extraction</button>
+  <button class="prompt-option" data-mode="copy">02 · Bridge Page Copy</button>
+  <button class="prompt-option" data-mode="html">03 · Bridge Page HTML</button>
+  <button class="prompt-option" data-mode="social">04 · Social Publishing Copy</button>
+ </div>
+ <div id="fields" class="field-grid"></div>
+ <div class="actions"><button class="btn btn-primary" id="generate">Generate Prompt ↗</button><button class="btn btn-secondary" id="reset">Reset fields</button></div>
+ <div class="output-wrap hidden" id="outputWrap">
+  <div class="output-head"><strong>Generated AI Prompt</strong><span id="outputLabel">Ready to copy</span></div>
+  <textarea id="output" readonly spellcheck="false" aria-label="Generated prompt"></textarea>
+  <div class="output-actions"><button class="btn btn-primary" id="copy">Copy Prompt</button><button class="btn btn-secondary" id="download">Download .txt</button></div>
+ </div>
+ <div class="notice"><strong>Important:</strong> এই generator কোনও AI service-এ তথ্য পাঠায় না। এটি আপনার ইনপুট থেকে prompt তৈরি করে। Product details যাচাই করুন, অজানা তথ্যকে অনুমান হিসেবে লিখবেন না এবং প্রকাশের আগে Affiliate Disclosure ও Affiliate Link পরীক্ষা করুন।</div>
+</section>
+
+<section class="generator" id="concept-prompt-box">
+ <div class="generator-head">
+  <div>
+   <div class="kicker">05 / Master Concept Blueprint</div>
+   <h2>Concept, Steps &amp; Gaps Prompt</h2>
+   <p class="section-desc">Copy the complete concept blueprint, execution steps, and gap definitions in one click.</p>
+  </div>
+  <span class="status">● Ready to Copy</span>
+ </div>
+ <div class="output-wrap" style="margin-top:0">
+  <div class="output-head">
+   <strong>CONCEPT · IDEA · STEPS · GAPS</strong>
+   <span>Bengali Workflow Prompt</span>
+  </div>
+  <textarea id="conceptPromptText" readonly spellcheck="false" aria-label="Concept and Gaps Prompt">CONCEPT
+
+Idea: শুধু প্রোডাক্টের ছবি পাবলিশ করে আয়
+
+Steps:
+
+Step#1, একটা প্রোডাক্ট বেছে নাও
+Step#2, প্রোডাক্টটার অ্যাফিলিয়েট লিংক সংগ্রহ করো
+Step#3, প্রোডাক্টটার ছবি তৈরি করো
+Step#4, অ্যাফিলিয়েট লিংকের বাটন ও অ্যাফিলিয়েট ইনকাম ডিসক্লেইমার দিয়ে একটা ব্রীজ পেজ বানিয়ে পাবলিশ করে দাও 
+Step#5, ছবিটা ক্যাপসন, কল টু একসন (visit here for details: bridge page link)  আর হ্যাশট্যাগ দিয়ে পাবলিশ করো
+
+GAPS:
+
+After step#2 – before step#3:
+ছবি তৈরি করার জন্য একটা প্রোডাক্ট ডিটেইলস এক্সট্রাকটর প্রম্পট লাগবে
+After step#3 – before step#4:
+ব্রিজ পেজ কপি লাগবে – কপি লেখার জন্য একটা প্রম্পট লাগবে।
+ব্রিজ পেজের এইচ টি এম এল ফাইল বানানোর জন্য একটা প্রম্পট লাগবে
+After step#4 – before step#5:
+ক্যাপসন উইথ কল-টু-একসন ও হ্যাশট্যাগ লেখার জন্য একটা প্রম্পট লাগবে</textarea>
+  <div class="output-actions">
+   <button class="btn btn-primary" id="copyConceptPrompt">Copy Prompt</button>
+  </div>
+ </div>
+</section>
+
+<footer class="footer">Private R&amp;D Workspace · Built for focused experimentation<br>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee</footer>
+</main>
+<script>
+const $=id=>document.getElementById(id);
+const common=[
+ {id:"product",label:"Product name",placeholder:"Enter the product name"},
+ {id:"url",label:"Product / listing URL",placeholder:"https://...",type:"url"},
+ {id:"affiliate",label:"Affiliate link",placeholder:"Paste your affiliate tracking URL",type:"url"},
+ {id:"audience",label:"Target audience",placeholder:"Who is this product intended for?"},
+ {id:"market",label:"Target market / country",placeholder:"e.g. India, United States"}
+];
+const schemas={
+ extract:{title:"Product Details Extraction",fields:[common[0],common[1],common[3],common[4],{id:"source",label:"Available product information",placeholder:"Paste product listing text, specifications, features, price, or other source details...",area:true},{id:"purpose",label:"Intended visual use",placeholder:"e.g. premium product hero image, lifestyle image, feature-led visual"}]},
+ copy:{title:"Bridge Page Copywriting",fields:[common[0],common[1],common[2],common[3],common[4],{id:"details",label:"Verified product details / extracted brief",placeholder:"Paste the verified product brief, features, benefits, specifications and price...",area:true},{id:"tone",label:"Writing tone",placeholder:"e.g. clear, helpful, premium, trustworthy"},{id:"disclosure",label:"Affiliate disclosure wording",placeholder:"e.g. This page contains affiliate links. I may earn a commission at no extra cost to you."}]},
+ html:{title:"Bridge Page HTML Development",fields:[common[0],common[2],common[3],common[4],{id:"copy",label:"Approved bridge page copy",placeholder:"Paste the complete approved page copy, including headings, product highlights, CTA and disclosure...",area:true},{id:"design",label:"Visual direction",placeholder:"e.g. clean premium, forest green palette, product-led, uncluttered"},{id:"image",label:"Product image URL (optional)",placeholder:"https://...",type:"url"},{id:"button",label:"CTA button text",placeholder:"e.g. View Product Details"},{id:"requirements",label:"Additional requirements",placeholder:"e.g. mobile-first, accessible, fast-loading, single HTML file",area:true}]},
+ social:{title:"Social Publishing Copy",fields:[common[0],common[2],common[3],common[4],{id:"bridge",label:"Published bridge page URL",placeholder:"https://...",type:"url"},{id:"platform",label:"Publishing platform",placeholder:"e.g. Facebook, Instagram, Pinterest"},{id:"visual",label:"Image description / key message",placeholder:"Describe the image and the main idea it communicates...",area:true},{id:"tone",label:"Caption tone",placeholder:"e.g. engaging, informative, natural"},{id:"hashtags",label:"Hashtag preference (optional)",placeholder:"e.g. 5–8 relevant hashtags"}]}
+};
+let mode="extract";
+function renderFields(){
+ const schema=schemas[mode];$("fields").innerHTML="";
+ schema.fields.forEach(f=>{
+  const wrap=document.createElement("div");wrap.className="field"+(f.area?" full":"");
+  const label=document.createElement("label");label.htmlFor="f_"+f.id;label.textContent=f.label;wrap.appendChild(label);
+  const el=document.createElement(f.area?"textarea":"input");el.id="f_"+f.id;el.placeholder=f.placeholder||"";if(f.type)el.type=f.type;
+  el.autocomplete="off";wrap.appendChild(el);$("fields").appendChild(wrap);
+ });
+ $("outputWrap").classList.add("hidden");
+}
+document.querySelectorAll(".prompt-option").forEach(btn=>btn.addEventListener("click",()=>{
+ mode=btn.dataset.mode;document.querySelectorAll(".prompt-option").forEach(b=>b.classList.toggle("active",b===btn));renderFields();
+}));
+function val(id){const el=$("f_"+id);return el?el.value.trim():""}
+function line(label,id){const v=val(id);return v?label+": "+v:""}
+function build(){
+ const s=schemas[mode],v=id=>val(id);
+ let p="";
+ const base=`Act as an experienced affiliate marketing strategist, product researcher, conversion copywriter, and ethical content specialist.\n\nPROJECT\nCreate the ${s.title} deliverable for the product below.\n\n${[
+ line("Product", "product"),line("Product URL","url"),line("Affiliate URL","affiliate"),line("Target audience","audience"),line("Target market","market")
+ ].filter(Boolean).join("\n")}\n\n`;
+ if(mode==="extract") p=base+`SOURCE MATERIAL\n${v("source")||"No source text supplied. Inspect the provided product URL if browsing is available. If it is not accessible, ask for source material. Do not invent facts."}\n\nINTENDED VISUAL USE\n${v("purpose")||"A professional, truthful product visual."}\n\nYOUR TASK\nAnalyse the supplied source and extract only verifiable product information. Return a structured Product Intelligence Brief with: product identity and category; exact features and specifications; practical benefits clearly distinguished from features; price and availability only if verified; target customer and use cases; differentiators supported by evidence; potential objections or limitations; visual facts that must be preserved; and a concise image-generation brief. Mark missing information as “Not provided” and uncertain claims as “Needs verification”. Never fabricate ratings, awards, guarantees, results, materials, compatibility, or performance claims.\n\nOUTPUT\nUse clear sections and concise, usable language. End with a compact factual checklist for the next image-creation stage.`;
+ if(mode==="copy") p=base+`VERIFIED PRODUCT BRIEF\n${v("details")||"No verified product brief supplied. Request it before writing factual claims."}\n\nWRITING DIRECTION\nTone: ${v("tone")||"clear, helpful, trustworthy and conversion-aware"}\nAffiliate disclosure: ${v("disclosure")||"This page contains affiliate links. I may earn a commission if you purchase through these links, at no additional cost to you."}\n\nYOUR TASK\nWrite complete Bridge Page copy that helps a visitor understand the product and decide whether to visit the merchant page. Include: a truthful headline; concise introduction; key product features; customer-relevant benefits without exaggeration; suitable use cases; a clear CTA leading to the affiliate link; and a visible affiliate disclosure near the CTA. Use only facts in the supplied brief. Do not invent testimonials, scarcity, discounts, stock status, guarantees, endorsements, or performance claims. Avoid manipulative urgency and unsupported superlatives.\n\nOUTPUT\nReturn polished, publication-ready page copy with clearly labelled sections. Keep the CTA destination as the supplied affiliate URL. If critical facts are missing, flag them instead of guessing.`;
+ if(mode==="html") p=base+`APPROVED PAGE COPY\n${v("copy")||"No approved copy supplied. Ask for the final copy before implementation."}\n\nIMPLEMENTATION DETAILS\nVisual direction: ${v("design")||"premium, clean, modern and product-led"}\nProduct image URL: ${v("image")||"No image URL supplied; create a tasteful image placeholder that can be replaced."}\nCTA label: ${v("button")||"View Product Details"}\nAdditional requirements: ${v("requirements")||"Mobile-first, accessible, lightweight, responsive single-file HTML."}\n\nYOUR TASK\nConvert the approved copy into one complete, self-contained HTML document. Include all CSS and any necessary vanilla JavaScript inline. Build a polished, mobile-first Bridge Page with responsive layout, readable typography, accessible contrast, a clear product presentation, prominent CTA linked to the exact affiliate URL, and a clearly visible affiliate disclosure. Do not alter the approved claims or destination URL. Do not add fake reviews, countdowns, popups, fabricated trust badges, or unverified claims. Ensure the CTA works, external links use safe rel attributes, and the page remains usable on small screens.\n\nOUTPUT RULES\nReturn the complete HTML source only in one code block. Include viewport metadata and a descriptive title. No external framework or build step.`;
+ if(mode==="social") p=base+`PUBLISHING DETAILS\nBridge page URL: ${v("bridge")||"Bridge page URL not supplied; request it before finalising the CTA."}\nPlatform: ${v("platform")||"Adapt the copy to the selected social platform."}\nImage description / message: ${v("visual")||"Use the supplied product image as the visual reference."}\nCaption tone: ${v("tone")||"natural, engaging, informative and trustworthy"}\nHashtag preference: ${v("hashtags")||"Use a small set of relevant, specific hashtags."}\n\nYOUR TASK\nCreate a social post to accompany the product image. Write a concise, engaging caption that accurately reflects the product and its verified benefits. Include a natural call to action directing people to the bridge page URL above (not directly to the affiliate link). Add relevant hashtags suited to the platform. Do not imply personal use, guaranteed results, false scarcity, or unsupported product claims. Keep the post native to the selected platform and avoid spammy hashtag stuffing.\n\nOUTPUT\nReturn: (1) primary caption, (2) CTA line with the exact bridge page URL, (3) relevant hashtags, and (4) one alternative shorter caption. Clearly separate each part.`;
+ $("output").value=p.trim();$("outputWrap").classList.remove("hidden");$("outputLabel").textContent=s.title+" · Ready";$("outputWrap").scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+$("generate").addEventListener("click",build);
+$("reset").addEventListener("click",()=>{renderFields();});
+$("copy").addEventListener("click",async()=>{const t=$("output").value;try{await navigator.clipboard.writeText(t);$("copy").textContent="Copied ✓";}catch(e){$("output").select();document.execCommand("copy");$("copy").textContent="Copied ✓";}setTimeout(()=>$("copy").textContent="Copy Prompt",1500);});
+$("download").addEventListener("click",()=>{const blob=new Blob([$("output").value],{type:"text/plain;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="gap-filler-"+mode+"-prompt.txt";a.click();URL.revokeObjectURL(url);});
+$("copyConceptPrompt").addEventListener("click",async()=>{const t=$("conceptPromptText").value;try{await navigator.clipboard.writeText(t);$("copyConceptPrompt").textContent="Copied ✓";}catch(e){$("conceptPromptText").select();document.execCommand("copy");$("copyConceptPrompt").textContent="Copied ✓";}setTimeout(()=>$("copyConceptPrompt").textContent="Copy Prompt",1500);});
+renderFields();
+</script>
+</body>
+</html>
