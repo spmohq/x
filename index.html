@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#26483c">
-<title>My Exclusive R&amp;D Tools and Process</title>
+<title>My Exclusive R&D Tools and Process</title>
 <link rel="icon" href="spm.ico">
 <style>
 :root{
@@ -91,10 +91,8 @@ textarea{min-height:92px;resize:vertical}
 .output-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 15px;background:#eff5f0;border-bottom:1px solid var(--line)}
 .output-head strong{font-size:.8rem;color:var(--forest)}
 .output-head span{font-size:.68rem;color:var(--muted)}
-#output{display:block;width:100%;min-height:330px;border:0;border-radius:0;box-shadow:none;padding:17px;font:.78rem/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:#26382f}
+#output{display:block;width:100%;min-height:330px;border:0;border-radius:0;box-shadow:none;padding:17px;font: .78rem/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fff;color:#26382f}
 #output:focus{box-shadow:none}
-#conceptPromptText{display:block;width:100%;min-height:340px;border:0;border-radius:0;box-shadow:none;padding:17px;font:.84rem/1.7 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:#fff;color:#20312b;resize:vertical}
-#conceptPromptText:focus{box-shadow:none}
 .output-actions{padding:12px 14px;border-top:1px solid var(--line);display:flex;gap:8px;flex-wrap:wrap}
 .notice{margin-top:15px;padding:13px 15px;border-radius:13px;background:#f7f7ed;border:1px solid #e8e8cb;color:#59613b;font-size:.76rem}
 .footer{text-align:center;padding:28px 10px 0;color:#7b8981;font-size:.72rem}
@@ -118,14 +116,13 @@ textarea{min-height:92px;resize:vertical}
  .actions .btn{flex:1 1 calc(50% - 8px)}
  .output-head{align-items:flex-start;flex-direction:column}
  #output{min-height:380px}
- #conceptPromptText{min-height:390px}
 }
 </style>
 </head>
 <body>
 <main class="shell">
 <header class="hero">
- <div class="eyebrow">Private workspace · Research &amp; Development</div>
+ <div class="eyebrow">Private workspace · Research & Development</div>
  <h1>My Exclusive R&amp;D Tools and Process</h1>
  <p>A focused workspace for product visuals, visual learning, research, and a repeatable product-publishing process.</p>
  <div class="hero-meta"><span class="pill">✦ Product Visuals</span><span class="pill">✦ Research Systems</span><span class="pill">✦ AI Prompt Studio</span></div>
@@ -176,8 +173,22 @@ textarea{min-height:92px;resize:vertical}
  </div>
 </section>
 
+
+<section class="section" id="workflow-review-prompt">
+ <div class="section-head"><div><div class="kicker">04 / Master workflow prompt</div><h2>Concept &amp; Gap Analysis Prompt</h2><p class="section-desc">Copy this complete brief into ChatGPT to review the concept, validate the workflow, and design any missing AI prompt components.</p></div></div>
+ <div class="process-card">
+  <div class="concept"><div class="concept-label">Ready-to-use prompt</div><p>Review my visual-first affiliate publishing concept, process, and gaps. Recommend a practical, complete AI-assisted workflow.</p></div>
+  <div class="field full">
+   <label for="masterPrompt">Master Prompt</label>
+   <textarea id="masterPrompt" readonly spellcheck="false" style="min-height:390px;font: .78rem/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;background:#fbfdfb"></textarea>
+   <div class="hint">The prompt includes your original concept, all five steps, the four identified gaps, and the expected review and deliverables.</div>
+  </div>
+  <div class="actions"><button class="btn btn-primary" id="copyMaster">Copy Prompt</button><span id="masterStatus" class="hint" aria-live="polite"></span></div>
+ </div>
+</section>
+
 <section class="generator" id="prompt-studio">
- <div class="generator-head"><div><div class="kicker">04 / AI prompt studio</div><h2>Gap-Filler Prompt Generator</h2><p class="section-desc">Select a prompt, complete the relevant fields, and generate a reusable prompt.</p></div><span class="status">● Runs in your browser</span></div>
+ <div class="generator-head"><div><div class="kicker">05 / AI prompt studio</div><h2>Gap-Filler Prompt Generator</h2><p class="section-desc">Select a prompt, complete the relevant fields, and generate a reusable prompt.</p></div><span class="status">● Runs in your browser</span></div>
  <div class="prompt-select" role="group" aria-label="Select prompt">
   <button class="prompt-option active" data-mode="extract">01 · Product Details Extraction</button>
   <button class="prompt-option" data-mode="copy">02 · Bridge Page Copy</button>
@@ -193,49 +204,7 @@ textarea{min-height:92px;resize:vertical}
  </div>
  <div class="notice"><strong>Important:</strong> এই generator কোনও AI service-এ তথ্য পাঠায় না। এটি আপনার ইনপুট থেকে prompt তৈরি করে। Product details যাচাই করুন, অজানা তথ্যকে অনুমান হিসেবে লিখবেন না এবং প্রকাশের আগে Affiliate Disclosure ও Affiliate Link পরীক্ষা করুন।</div>
 </section>
-
-<section class="generator" id="concept-prompt-box">
- <div class="generator-head">
-  <div>
-   <div class="kicker">05 / Master Concept Blueprint</div>
-   <h2>Concept, Steps &amp; Gaps Prompt</h2>
-   <p class="section-desc">Copy the complete concept blueprint, execution steps, and gap definitions in one click.</p>
-  </div>
-  <span class="status">● Ready to Copy</span>
- </div>
- <div class="output-wrap" style="margin-top:0">
-  <div class="output-head">
-   <strong>CONCEPT · IDEA · STEPS · GAPS</strong>
-   <span>Bengali Workflow Prompt</span>
-  </div>
-  <textarea id="conceptPromptText" readonly spellcheck="false" aria-label="Concept and Gaps Prompt">CONCEPT
-
-Idea: শুধু প্রোডাক্টের ছবি পাবলিশ করে আয়
-
-Steps:
-
-Step#1, একটা প্রোডাক্ট বেছে নাও
-Step#2, প্রোডাক্টটার অ্যাফিলিয়েট লিংক সংগ্রহ করো
-Step#3, প্রোডাক্টটার ছবি তৈরি করো
-Step#4, অ্যাফিলিয়েট লিংকের বাটন ও অ্যাফিলিয়েট ইনকাম ডিসক্লেইমার দিয়ে একটা ব্রীজ পেজ বানিয়ে পাবলিশ করে দাও 
-Step#5, ছবিটা ক্যাপসন, কল টু একসন (visit here for details: bridge page link)  আর হ্যাশট্যাগ দিয়ে পাবলিশ করো
-
-GAPS:
-
-After step#2 – before step#3:
-ছবি তৈরি করার জন্য একটা প্রোডাক্ট ডিটেইলস এক্সট্রাকটর প্রম্পট লাগবে
-After step#3 – before step#4:
-ব্রিজ পেজ কপি লাগবে – কপি লেখার জন্য একটা প্রম্পট লাগবে।
-ব্রিজ পেজের এইচ টি এম এল ফাইল বানানোর জন্য একটা প্রম্পট লাগবে
-After step#4 – before step#5:
-ক্যাপসন উইথ কল-টু-একসন ও হ্যাশট্যাগ লেখার জন্য একটা প্রম্পট লাগবে</textarea>
-  <div class="output-actions">
-   <button class="btn btn-primary" id="copyConceptPrompt">Copy Prompt</button>
-  </div>
- </div>
-</section>
-
-<footer class="footer">Private R&amp;D Workspace · Built for focused experimentation<br>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Siva Prasad Mukherjee</footer>
+<footer class="footer">Private R&amp;D Workspace · Built for focused experimentation<br>Copyright &copy; <script>document.write(new Date().getFullYear())</script></footer>
 </main>
 <script>
 const $=id=>document.getElementById(id);
@@ -284,8 +253,86 @@ $("generate").addEventListener("click",build);
 $("reset").addEventListener("click",()=>{renderFields();});
 $("copy").addEventListener("click",async()=>{const t=$("output").value;try{await navigator.clipboard.writeText(t);$("copy").textContent="Copied ✓";}catch(e){$("output").select();document.execCommand("copy");$("copy").textContent="Copied ✓";}setTimeout(()=>$("copy").textContent="Copy Prompt",1500);});
 $("download").addEventListener("click",()=>{const blob=new Blob([$("output").value],{type:"text/plain;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download="gap-filler-"+mode+"-prompt.txt";a.click();URL.revokeObjectURL(url);});
-$("copyConceptPrompt").addEventListener("click",async()=>{const t=$("conceptPromptText").value;try{await navigator.clipboard.writeText(t);$("copyConceptPrompt").textContent="Copied ✓";}catch(e){$("conceptPromptText").select();document.execCommand("copy");$("copyConceptPrompt").textContent="Copied ✓";}setTimeout(()=>$("copyConceptPrompt").textContent="Copy Prompt",1500);});
 renderFields();
+
+const masterPromptText = `Act as an experienced affiliate marketing strategist, product research analyst, visual marketing specialist, conversion copywriter, and AI workflow architect.
+
+YOUR TASK
+Review my concept, idea, steps, and identified gaps. Evaluate whether the workflow is practical, complete, ethical, and repeatable. Identify missing steps, risks, dependencies, and opportunities to simplify it. Then design the AI prompts needed to fill the gaps.
+
+CONCEPT
+Idea: শুধু প্রোডাক্টের ছবি পাবলিশ করে আয়
+
+STEPS
+Step #1: একটা প্রোডাক্ট বেছে নাও।
+Step #2: প্রোডাক্টটার অ্যাফিলিয়েট লিংক সংগ্রহ করো।
+Step #3: প্রোডাক্টটার ছবি তৈরি করো।
+Step #4: অ্যাফিলিয়েট লিংকের বাটন ও অ্যাফিলিয়েট ইনকাম ডিসক্লেইমার দিয়ে একটা ব্রীজ পেজ বানিয়ে পাবলিশ করে দাও।
+Step #5: ছবিটা ক্যাপশন, কল টু অ্যাকশন (visit here for details: bridge page link) আর হ্যাশট্যাগ দিয়ে পাবলিশ করো।
+
+IDENTIFIED GAPS
+
+Gap 1 — After Step #2 and before Step #3:
+An AI prompt is needed to extract and organise accurate product details so those details can be used to create a truthful, persuasive product image.
+
+Gap 2 — After Step #3 and before Step #4:
+An AI prompt is needed to write the complete Bridge Page copy using verified product information.
+
+Gap 3 — After Step #3 and before Step #4:
+An AI prompt is needed to convert the approved Bridge Page copy into a complete, mobile-responsive, single-file HTML page containing the affiliate-link button and a clear affiliate-income disclosure.
+
+Gap 4 — After Step #4 and before Step #5:
+An AI prompt is needed to write the social media caption, call to action pointing to the published Bridge Page URL, and relevant hashtags.
+
+REVIEW REQUIREMENTS
+1. Review the core concept and assess its strengths, limitations, and realistic earning assumptions. Do not imply that publishing product images guarantees income.
+2. Review all five steps in sequence. Identify any missing activity, especially product validation, audience fit, image accuracy, link testing, disclosure placement, platform suitability, and performance tracking.
+3. Review each identified gap. Confirm whether the four prompts are sufficient or whether an additional prompt is genuinely necessary.
+4. Map every gap to the exact point in the workflow where it must be filled.
+5. Recommend a lean, practical workflow that avoids unnecessary complexity.
+6. Ensure that product claims are based only on verifiable source information. Never invent specifications, benefits, reviews, awards, discounts, scarcity, or performance claims.
+7. Ensure affiliate disclosure is clear and appropriately placed, and advise checking applicable platform rules and local requirements.
+8. Ensure the social CTA directs visitors to the Bridge Page URL, while the Bridge Page CTA uses the correct affiliate link.
+
+EXPECTED DELIVERABLES
+A. Concept Review
+B. Step-by-Step Workflow Review
+C. Gap Analysis and any additional gaps discovered
+D. Final Recommended Workflow, with each stage numbered
+E. Four standalone, reusable AI prompts:
+   - Product Details Extraction Prompt
+   - Bridge Page Copywriting Prompt
+   - Bridge Page HTML Development Prompt
+   - Social Publishing Copy Prompt
+F. For each prompt, specify its required inputs, exact output, and the next workflow stage that consumes its output.
+G. A concise quality-control checklist before publishing.
+
+PROMPT DESIGN RULES
+- Make every prompt standalone and reusable.
+- Use clearly labelled dynamic input placeholders for user-supplied information.
+- Give precise instructions for missing or unverifiable information: ask for clarification or label it “Not provided”; never guess.
+- Preserve the distinction between product features and customer benefits.
+- The HTML prompt must request one complete HTML file with embedded CSS and JavaScript, mobile responsiveness, accessible design, working affiliate CTA, and visible disclosure.
+- The social prompt must request a platform-appropriate caption, a clear Bridge Page CTA, and relevant hashtags.
+- Keep the system practical for an individual creator with a lean workflow.
+
+Write the analysis and explanations in clear, natural Bengali (Kolkata usage). Keep the reusable AI prompts in English unless Bengali is specifically more useful for a particular input or output. Address the user formally using “আপনি”.`;
+
+$("masterPrompt").value = masterPromptText;
+$("copyMaster").addEventListener("click", async () => {
+ const button = $("copyMaster"), status = $("masterStatus");
+ try {
+  await navigator.clipboard.writeText(masterPromptText);
+  button.textContent = "Copied ✓"; status.textContent = "Prompt copied to clipboard.";
+ } catch (err) {
+  $("masterPrompt").focus(); $("masterPrompt").select();
+  const ok = document.execCommand("copy");
+  button.textContent = ok ? "Copied ✓" : "Select and copy";
+  status.textContent = ok ? "Prompt copied to clipboard." : "Please copy the selected text.";
+ }
+ setTimeout(() => button.textContent = "Copy Prompt", 1800);
+});
+
 </script>
 </body>
 </html>
